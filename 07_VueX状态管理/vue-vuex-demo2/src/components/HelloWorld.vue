@@ -1,17 +1,17 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>{{ $store.state.count }}</p>
-    <p>{{ getCount }}</p>
-    <p>Count={{ count }}</p>
-    <p>{{ user.nick }}</p>
-    <p>{{ user.age }}</p>
-  </div>
+<div class="hello">
+  <h1>{{ msg }}</h1>
+  <p>{{ $store.state.count }}</p>
+  <p>{{ getCount }}</p>
+  <p>Count={{ count }}</p>
+  <p>{{ user.nick }}</p>
+  <p>{{ user.age }}</p>
+</div>
 </template>
 
 <script>
 
-import { mapState } from "vuex"
+import {mapState} from "vuex"
 
 export default {
   name: 'HelloWorld',
@@ -29,9 +29,9 @@ export default {
   //   user:state => state.user
   // })
   // computed:mapState(["count","user"])
-  computed:{
-    ...mapState(["count","user"]),
-    getCount(){
+  computed: {
+    ...mapState(["count", "user"]),
+    getCount() {
       return this.$store.state.count
     }
   }
@@ -43,14 +43,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }

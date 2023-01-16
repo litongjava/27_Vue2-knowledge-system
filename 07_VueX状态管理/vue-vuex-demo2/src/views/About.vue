@@ -30,8 +30,8 @@
 
 <script>
 
-import { mapState,mapMutations,mapActions,mapGetters } from "vuex"
-import { MIN_COUNT } from "../store/mutation-types"
+import {mapActions, mapGetters, mapMutations, mapState} from "vuex"
+import {MIN_COUNT} from "../store/mutation-types"
 
 export default {
   data(){

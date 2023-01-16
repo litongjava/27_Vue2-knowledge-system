@@ -8,35 +8,35 @@ import actions from "./actions"
 import getters from "./getters"
 import createLogger from 'vuex/dist/logger'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-const logPlugin = store =>{
-  store.subscribe((mutation,state) =>{
-    console.log("mutation",mutation);
-    console.log("state",state);
+const logPlugin = store => {
+  store.subscribe((mutation, state) => {
+    console.log("mutation", mutation);
+    console.log("state", state);
   })
-}
+};
 
 
 // process.env.NODE_ENV = production
 const store = new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production', // 严格模式
-  plugins:[createLogger()],
+  plugins: [createLogger()],
   state,
   mutations,
   actions,
   getters,
-  modules:{
+  modules: {
     ModuleA,
     ModuleB
   }
-})
+});
 
-if(module.hot){
-  module.hot.accept(["./getters"],() =>{
+if (module.hot) {
+  module.hot.accept(["./getters"], () => {
     const newGtters = require("./getters").default;
     store.hotUpdate({
-      getters:newGtters
+      getters: newGtters
     })
   })
 }
