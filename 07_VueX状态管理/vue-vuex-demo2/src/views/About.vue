@@ -14,7 +14,7 @@
     <button @click="minHandle">减少</button>
     <button @click="newRulesHandle">新增字段</button>
     <button @click="bannerHandle">获取banner数据</button>
-    <p>Count={{ count }}</p>
+    <p>Count={{ count=4000 }}</p>
     <ul>
       <li v-for="(item,key,index) in user" :key="index">
         <p>{{ key }}:{{ item }}</p>

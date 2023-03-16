@@ -11,6 +11,7 @@ import createLogger from 'vuex/dist/logger'
 Vue.use(Vuex);
 
 const logPlugin = store => {
+  console.log("store:",store);
   store.subscribe((mutation, state) => {
     console.log("mutation", mutation);
     console.log("state", state);

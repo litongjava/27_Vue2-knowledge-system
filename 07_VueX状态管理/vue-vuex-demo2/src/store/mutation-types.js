@@ -1,1 +1,1 @@
-export const MIN_COUNT = "minCount";
+export const MIN_COUNT="minCount";

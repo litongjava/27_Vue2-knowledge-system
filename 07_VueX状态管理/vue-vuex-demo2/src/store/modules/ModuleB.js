@@ -1,6 +1,6 @@
 export default {
-    namespaced: true,
-    state:{
-        moduleBCount:10000
-    }
+  namespaced: true,
+  state: {
+    moduleBCount: 10000
+  }
 }
