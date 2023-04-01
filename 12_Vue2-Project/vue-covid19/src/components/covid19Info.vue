@@ -15,29 +15,14 @@
 </template>
 
 <script>
-import api from "../api"
 export default {
-  name: "covid19Info",
-  data(){
-    return {
-      covid19Info:{}
-    }
-  },
-  mounted() {
-    api.getNcov({
-      key: "62e34ad34025d5d5127135efa58d4ca8",
-    }).then((res)=>{
-      if(res.status==200){
-        this.covid19Info={
-          "note1":res.data.newList[0].desc.note1,
-          "note2":res.data.newList[0].desc.note2,
-          "note3":res.data.newList[0].desc.note3,
-          "remark1":res.data.newList[0].desc.remark1,
-          "remark2":res.data.newList[0].desc.remark2,
-          "remark3":res.data.newList[0].desc.remark3,
-        }
+  props:{
+    covid19Info:{
+      type:Object,
+      default:()=>{
+        return {}
       }
-    })
+    }
   }
 }
 </script>
